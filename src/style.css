@@ -1,5 +1,13 @@
+/* @format */
+
 body {
 	color: white;
 	background-color: black;
 	font-family: Arial;
+}
+
+@media screen and (orientation: landscape) {
+	.width {
+		max-width: 600px;
+	}
 }

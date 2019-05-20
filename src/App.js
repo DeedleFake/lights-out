@@ -40,7 +40,10 @@ const App = () => {
 		<div
 			style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
 		>
-			<div style={{ display: 'flex', flexDirection: 'column', maxWidth: 600 }}>
+			<div
+				className="width"
+				style={{ display: 'flex', flexDirection: 'column' }}
+			>
 				<h1>Lights Out</h1>
 
 				<svg
@@ -98,9 +101,7 @@ const App = () => {
 						value={size}
 						onChange={(ev) => {
 							let val = parseInt(ev.target.value, 10)
-							setSize((size) =>
-								isNaN(val) || val < 2 || val > 10 ? size : val,
-							)
+							setSize((size) => (isNaN(val) ? size : val))
 						}}
 					/>
 
