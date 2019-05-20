@@ -52,6 +52,7 @@ const App = () => {
 						marginTop: 16,
 						border: `solid 16px ${won ? 'green' : 'grey'}`,
 						borderRadius: 32,
+						padding: 8,
 					}}
 					viewBox={`0 0 ${10 * board[0].length} ${10 * board.length}`}
 				>
@@ -97,7 +98,6 @@ const App = () => {
 						}}
 						type="number"
 						min="2"
-						max="10"
 						value={size}
 						onChange={(ev) => {
 							let val = parseInt(ev.target.value, 10)
