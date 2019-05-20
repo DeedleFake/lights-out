@@ -100,8 +100,12 @@ const App = () => {
 						min="2"
 						value={size}
 						onChange={(ev) => {
-							let val = parseInt(ev.target.value, 10)
-							setSize((size) => (isNaN(val) ? size : val))
+							let val = ev.target.value
+							if (val.match(/^[0-9]*$/) == null) {
+								return
+							}
+
+							setSize(parseInt(val, 10))
 						}}
 					/>
 
@@ -113,7 +117,20 @@ const App = () => {
 							padding: 8,
 							marginLeft: 8,
 						}}
-						onClick={() => dispatchBoard({ type: 'reset', size })}
+						disabled={!(size > 0)}
+						onClick={() => {
+							if (
+								size !== board.length &&
+								size > 20 &&
+								!window.confirm(
+									`Large board sizes can run pretty badly and be basically unplayable.\nAre you sure that you want to use a ${size}x${size} board?`,
+								)
+							) {
+								return
+							}
+
+							dispatchBoard({ type: 'reset', size })
+						}}
 					>
 						{size !== board.length ? 'Resize' : 'Reset'}
 					</button>
