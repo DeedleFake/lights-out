@@ -37,8 +37,10 @@ const App = () => {
 	)
 
 	return (
-		<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-			<div style={{ display: 'flex', flexDirection: 'column', width: 500 }}>
+		<div
+			style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+		>
+			<div style={{ display: 'flex', flexDirection: 'column', maxWidth: 600 }}>
 				<h1>Lights Out</h1>
 
 				<svg
@@ -83,7 +85,7 @@ const App = () => {
 						flexDirection: 'row',
 						justifyContent: 'space-between',
 						marginTop: 16,
-							padding: '0 32px',
+						padding: '0 32px',
 					}}
 				>
 					<input
