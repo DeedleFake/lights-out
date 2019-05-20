@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAEA,KACC,UAAY,CACZ,qBAAuB,CACvB,iBACD,CAEA,0CACC,OACC,eACD,CACD","file":"main.ec561111.chunk.css","sourcesContent":["/* @format */\n\nbody {\n\tcolor: white;\n\tbackground-color: black;\n\tfont-family: Arial;\n}\n\n@media screen and (orientation: landscape) {\n\t.width {\n\t\tmax-width: 600px;\n\t}\n}\n"]}
