@@ -41,8 +41,7 @@ const App = () => {
 			style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
 		>
 			<div
-				className="width"
-				style={{ display: 'flex', flexDirection: 'column' }}
+				style={{ display: 'flex', flexDirection: 'column', maxWidth: 800 }}
 			>
 				<h1>Lights Out</h1>
 
